@@ -6,7 +6,9 @@ import { editExpense, removeExpense } from '../actions/expenses';
 const EditExpensePage = (props) => {
     return (
             <div>
+              {console.log('running',props)}
                 <ExpenseForm 
+              
                 expense={props.expense}
                 onSubmit={(expense) => {
                     props.dispatch(editExpense(props.expense.id, expense))
